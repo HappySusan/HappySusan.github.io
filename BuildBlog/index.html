@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>快速创建自己的Blog（HEXO + GITHUB PAGE） | Monster Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;#x81EA;&amp;#x5165;&amp;#x524D;&amp;#x7AEF;&amp;#x8FD9;&amp;#x884C;&amp;#x4EE5;&amp;#x6765;&amp;#xFF0C;&amp;#x5C31;&amp;#x60F3;&amp;#x7740;&amp;#x4EC0;&amp;#x4E48;&amp;#x65F6;&amp;#x5019;&amp;#x53EF;&amp;#x4EE5;&amp;#x50CF;&amp;#x5927;&amp;#x725B;&amp;#x4EEC;&amp;#x4E00;&amp;#x6837;&amp;#x6709;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="快速创建自己的Blog（HEXO + GITHUB PAGE）">
+<meta property="og:url" content="http://yoursite.com/BuildBlog/index.html">
+<meta property="og:site_name" content="Monster Blog">
+<meta property="og:description" content="&amp;#x81EA;&amp;#x5165;&amp;#x524D;&amp;#x7AEF;&amp;#x8FD9;&amp;#x884C;&amp;#x4EE5;&amp;#x6765;&amp;#xFF0C;&amp;#x5C31;&amp;#x60F3;&amp;#x7740;&amp;#x4EC0;&amp;#x4E48;&amp;#x65F6;&amp;#x5019;&amp;#x53EF;&amp;#x4EE5;&amp;#x50CF;&amp;#x5927;&amp;#x725B;&amp;#x4EEC;&amp;#x4E00;&amp;#x6837;&amp;#x6709;">
+<meta property="og:image" content="http://yoursite.com/BuildBlog/register.png">
+<meta property="og:image" content="http://yoursite.com/BuildBlog/example.png">
+<meta property="og:updated_time" content="2016-04-12T03:39:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="快速创建自己的Blog（HEXO + GITHUB PAGE）">
+<meta name="twitter:description" content="&amp;#x81EA;&amp;#x5165;&amp;#x524D;&amp;#x7AEF;&amp;#x8FD9;&amp;#x884C;&amp;#x4EE5;&amp;#x6765;&amp;#xFF0C;&amp;#x5C31;&amp;#x60F3;&amp;#x7740;&amp;#x4EC0;&amp;#x4E48;&amp;#x65F6;&amp;#x5019;&amp;#x53EF;&amp;#x4EE5;&amp;#x50CF;&amp;#x5927;&amp;#x725B;&amp;#x4EEC;&amp;#x4E00;&amp;#x6837;&amp;#x6709;">
+<meta name="twitter:image" content="http://yoursite.com/BuildBlog/register.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Monster Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/img/logo.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Monster</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">我思故我在</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>Über</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Monster</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/img/logo.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Monster</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">我思故我在</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-BuildBlog" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/BuildBlog/" class="article-date">
+  	<time datetime="2016-04-12T03:20:46.000Z" itemprop="datePublished">2016-04-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      快速创建自己的Blog（HEXO + GITHUB PAGE）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&#x81EA;&#x5165;&#x524D;&#x7AEF;&#x8FD9;&#x884C;&#x4EE5;&#x6765;&#xFF0C;&#x5C31;&#x60F3;&#x7740;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x50CF;&#x5927;&#x725B;&#x4EEC;&#x4E00;&#x6837;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x6280;&#x672F;Blog&#xFF0C;&#x628A;&#x81EA;&#x5DF1;&#x7684;&#x5FC3;&#x5F97;&#x4F53;&#x4F1A;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#xFF0C;&#x4E8E;&#x662F;&#xFF0C;&#x5728;&#x6252;&#x5404;&#x79CD;&#x7F51;&#x7AD9;&#x6559;&#x7A0B;&#x4E4B;&#x540E;&#xFF0C;&#x7EC8;&#x4E8E;&#x6709;&#x4E86;&#x8FD9;&#x4E2A;Blog&#x3002;&#x5F00;&#x95E8;&#x7B2C;&#x4E00;&#x7BC7;&#xFF0C;&#x5148;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x7528;hexo+gitHub&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;blog&#xFF08;&#x4EC5;&#x4F9B;&#x50CF;&#x6211;&#x8FD9;&#x6837;&#x7684;&#x5C0F;&#x767D;&#x767D;&#x4F7F;&#x7528;~&#x8BF7;&#x591A;&#x6307;&#x6559;&#xFF09;&#x3002;<br><a id="more"></a></p>
+<h2 id="&#x521B;&#x5EFA;&#x6B65;&#x9AA4;"><a href="#&#x521B;&#x5EFA;&#x6B65;&#x9AA4;" class="headerlink" title="&#x521B;&#x5EFA;&#x6B65;&#x9AA4;"></a>&#x521B;&#x5EFA;&#x6B65;&#x9AA4;</h2><h3 id="1-&#x6CE8;&#x518C;GitHub"><a href="#1-&#x6CE8;&#x518C;GitHub" class="headerlink" title="1. &#x6CE8;&#x518C;GitHub"></a>1. &#x6CE8;&#x518C;GitHub</h3><p>&#x8FDB;&#x5165;GitHub&#x5B98;&#x7F51;&#x8FDB;&#x884C;&#x6CE8;&#x518C; [<a href="https://github.com" target="_blank" rel="external">https://github.com</a>]<br><img src="/BuildBlog/register.png" alt="&#x6CE8;&#x518C;gitHub"></p>
+<h3 id="2-&#x914D;&#x7F6E;Github"><a href="#2-&#x914D;&#x7F6E;Github" class="headerlink" title="2. &#x914D;&#x7F6E;Github"></a>2. &#x914D;&#x7F6E;Github</h3><p>2.1 &#x5EFA;&#x7ACB;Repository<br>&#x5EFA;&#x7ACB;&#x4E0E;&#x4F60;&#x7528;&#x6237;&#x540D;&#x5BF9;&#x5E94;&#x7684;&#x4ED3;&#x5E93;&#xFF0C;&#x4ED3;&#x5E93;&#x540D;&#x5FC5;&#x987B;&#x4E3A;&#x3010;your_user_name.github.io&#x3011;</p>
+<p>2.2 &#x914D;&#x7F6E;SSH-Key<br>&#x53C2;&#x8003;&#xFF1A;<a href="https://help.github.com/articles/generating-an-ssh-key/" target="_blank" rel="external">https://help.github.com/articles/generating-an-ssh-key/</a></p>
+<h3 id="3-&#x5B89;&#x88C5;Hexo"><a href="#3-&#x5B89;&#x88C5;Hexo" class="headerlink" title="3. &#x5B89;&#x88C5;Hexo"></a>3. &#x5B89;&#x88C5;Hexo</h3><p>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x8BF4;&#x5B89;&#x88C5;&#x6B65;&#x9AA4;&#xFF0C;&#x5728;&#x4F60;&#x8981;&#x521B;&#x5EFA;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x6267;&#x884C;&#x8FD9;&#x4E24;&#x4E2A;&#x6B65;&#x9AA4;&#xFF0C;blog&#x76EE;&#x5F55;&#x5C31;&#x751F;&#x6210;&#x4E86;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;hexo&#x914D;&#x7F6E;</p>
+<pre><code>1. $ npm install -g hexo
+2. $ hexo init 
+</code></pre><p>&#x586B;&#x5751;&#x6559;&#x7A0B;+&#x8BE6;&#x7EC6;&#x89E3;&#x91CA;&#xFF1A;<a href="http://www.jianshu.com/p/35e197cb1273" target="_blank" rel="external">http://www.jianshu.com/p/35e197cb1273</a></p>
+<h3 id="4-hexo&#x64CD;&#x4F5C;"><a href="#4-hexo&#x64CD;&#x4F5C;" class="headerlink" title="4. hexo&#x64CD;&#x4F5C;"></a>4. hexo&#x64CD;&#x4F5C;</h3><p>*&#x5168;&#x5C40;&#x8BBE;&#x7F6E;<br>&#x5728;&#x4F60;&#x535A;&#x5BA2;&#x76EE;&#x5F55;&#x4E0B;&#x6709;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x540D;_config.yml&#xFF0C;&#x6253;&#x5F00;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;<br>&#x53C2;&#x8003;&#xFF1A;<a href="http://www.jianshu.com/p/35e197cb1273" target="_blank" rel="external">http://www.jianshu.com/p/35e197cb1273</a></p>
+<p>*&#x4E3B;&#x9898;&#x8BBE;&#x7F6E;<br>&#x5728;&#x4F60;&#x535A;&#x5BA2;&#x76EE;&#x5F55;&#x4E0B; \themes\&#x4F60;&#x4F7F;&#x7528;&#x7684;&#x4E3B;&#x9898;_config.yml</p>
+<p>*&#x5E38;&#x7528;&#x547D;&#x4EE4;</p>
+<pre><code>hexo new &quot;postName&quot;       #&#x65B0;&#x5EFA;&#x6587;&#x7AE0;
+hexo new page &quot;pageName&quot;  #&#x65B0;&#x5EFA;&#x9875;&#x9762;
+hexo generate             #&#x751F;&#x6210;&#x9759;&#x6001;&#x9875;&#x9762;&#x81F3;public&#x76EE;&#x5F55;
+hexo server               #&#x5F00;&#x542F;&#x9884;&#x89C8;&#x8BBF;&#x95EE;&#x7AEF;&#x53E3;&#xFF08;&#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;4000&#xFF0C;&apos;ctrl + c&apos;&#x5173;&#x95ED;server&#xFF09;
+hexo deploy               #&#x5C06;.deploy&#x76EE;&#x5F55;&#x90E8;&#x7F72;&#x5230;GitHub
+</code></pre><p>*&#x590D;&#x5408;&#x547D;&#x4EE4;</p>
+<pre><code>hexo deploy -g
+hexo server -g
+</code></pre><p>*&#x6709;&#x65F6;&#x5019;&#x751F;&#x6210;&#x7684;&#x7F51;&#x9875;&#x51FA;&#x9519;&#x4E86;&#xFF0C;&#x800C;&#x751F;&#x6210;&#x7684;rss&#x5176;&#x5B9E;&#x6CA1;&#x6709;&#x6E05;&#x9664;&#xFF0C;&#x90A3;&#x4E48;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x5728;&#x91CD;&#x65B0;&#x751F;&#x6210;&#x5427;</p>
+<pre><code>hexo clean
+</code></pre><p>&#x53EA;&#x8981;&#x6267;&#x884C;&#x4E86; hexo deploy &#x4F60;&#x7684;&#x5185;&#x5BB9;&#x5C31;&#x90E8;&#x7F72;&#x5230;&#x4E86;github&#x4E0A;&#x4E86;</p>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x4E00;&#x4E2A;&#x81EA;&#x5DF1;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x53EF;&#x4EE5;&#x53BB;&#x4E07;&#x7F51;&#x8D2D;&#x4E70;&#xFF0C;&#x7F51;&#x4E0A;&#x6559;&#x7A0B;&#x5F88;&#x591A;&#xFF0C;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x641C;&#x4E00;&#x4E0B;</p>
+<h2 id="BLOG&#x4E66;&#x5199;&#x89C4;&#x5219;"><a href="#BLOG&#x4E66;&#x5199;&#x89C4;&#x5219;" class="headerlink" title="BLOG&#x4E66;&#x5199;&#x89C4;&#x5219;"></a>BLOG&#x4E66;&#x5199;&#x89C4;&#x5219;</h2><h3 id="1-markdown&#x8BED;&#x6CD5;"><a href="#1-markdown&#x8BED;&#x6CD5;" class="headerlink" title="1. markdown&#x8BED;&#x6CD5;"></a>1. markdown&#x8BED;&#x6CD5;</h3><p>hexo&#x7528;&#x7684;&#x662F;md&#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x57FA;&#x4E8E;markdown&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x53C2;&#x8003; <a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">http://wowubuntu.com/markdown/</a></p>
+<h3 id="2-&#x5982;&#x4F55;&#x63D2;&#x5165;&#x56FE;&#x7247;"><a href="#2-&#x5982;&#x4F55;&#x63D2;&#x5165;&#x56FE;&#x7247;" class="headerlink" title="2. &#x5982;&#x4F55;&#x63D2;&#x5165;&#x56FE;&#x7247;"></a>2. &#x5982;&#x4F55;&#x63D2;&#x5165;&#x56FE;&#x7247;</h3><p>&#x9996;&#x5148;&#x786E;&#x8BA4; _config.yml &#x4E2D;&#x6709; post_asset_folder:true &#x3002;&#x5728; hexo &#x76EE;&#x5F55;&#xFF0C;&#x6267;&#x884C;</p>
+<p>npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="external">https://github.com/CodeFalling/hexo-asset-image</a> &#x2013;save</p>
+<p>&#x5047;&#x8BBE;&#x5728;</p>
+<pre><code>helloWord
+&#x251C;&#x2500;&#x2500; logo.jpg
+&#x251C;&#x2500;&#x2500; login.jpg
+&#x2514;&#x2500;&#x2500;rules.jpg
+helloWord.md
+</code></pre><p>&#x8FD9;&#x6837;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF08;&#x76EE;&#x5F55;&#x540D;&#x548C;&#x6587;&#x7AE0;&#x540D;&#x4E00;&#x81F4;&#xFF09;&#xFF0C;&#x53EA;&#x8981;&#x4F7F;&#x7528;<br><img src="/BuildBlog/example.png" alt="&#x6CE8;&#x518C;gitHub"><br>&#x5C31;&#x53EF;&#x4EE5;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x3002;<br>&#x53C2;&#x8003;&#x5730;&#x5740;&#xFF1A;<a href="http://www.tuicool.com/articles/umEBVfI" target="_blank" rel="external">http://www.tuicool.com/articles/umEBVfI</a></p>
+<p>##tips<br>&#x5982;&#x679C;&#x4E2D;&#x95F4;&#x9047;&#x5230;&#x95EE;&#x9898;&#xFF0C;&#x6216;&#x8005;&#x5728;hexo deploy&#x4E4B;&#x540E;&#xFF0C;github&#x4E0A;&#x6CA1;&#x6709;&#x66F4;&#x65B0;&#xFF0C;&#x4E5F;&#x627E;&#x4E0D;&#x5230;&#x95EE;&#x9898;&#x6240;&#x5728;&#xFF0C;&#x5EFA;&#x8BAE;&#x91CD;&#x65B0;&#x6309;&#x7167;&#x7B2C;&#x56DB;&#x6B65;&#x6267;&#x884C;&#x4E00;&#x904D;&#xFF0C;&#x91CD;&#x65B0;&#x5B89;&#x88C5;hexo&#x3002;</p>
+<h2 id="&#x7EFC;&#x5408;&#x53C2;&#x8003;"><a href="#&#x7EFC;&#x5408;&#x53C2;&#x8003;" class="headerlink" title="&#x7EFC;&#x5408;&#x53C2;&#x8003;"></a>&#x7EFC;&#x5408;&#x53C2;&#x8003;</h2><p><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">http://www.cnblogs.com/zhcncn/p/4097881.html</a></p>
+<h2 id="HEXO&#x5B98;&#x7F51;&#x793A;&#x4F8B;"><a href="#HEXO&#x5B98;&#x7F51;&#x793A;&#x4F8B;" class="headerlink" title="HEXO&#x5B98;&#x7F51;&#x793A;&#x4F8B;"></a>HEXO&#x5B98;&#x7F51;&#x793A;&#x4F8B;</h2><p>See my <a href="/QuickStart/">&#x5B98;&#x7F51;&#x793A;&#x4F8B;</a> page for details.</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/QuickStart/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">官网示例</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="BuildBlog" data-title="快速创建自己的Blog（HEXO + GITHUB PAGE）" data-url="http://yoursite.com/BuildBlog/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Monster
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
