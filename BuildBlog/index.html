@@ -14,7 +14,7 @@
 <meta property="og:description" content="&amp;#x81EA;&amp;#x5165;&amp;#x524D;&amp;#x7AEF;&amp;#x8FD9;&amp;#x884C;&amp;#x4EE5;&amp;#x6765;&amp;#xFF0C;&amp;#x5C31;&amp;#x60F3;&amp;#x7740;&amp;#x4EC0;&amp;#x4E48;&amp;#x65F6;&amp;#x5019;&amp;#x53EF;&amp;#x4EE5;&amp;#x50CF;&amp;#x5927;&amp;#x725B;&amp;#x4EEC;&amp;#x4E00;&amp;#x6837;&amp;#x6709;">
 <meta property="og:image" content="http://yoursite.com/BuildBlog/register.png">
 <meta property="og:image" content="http://yoursite.com/BuildBlog/example.png">
-<meta property="og:updated_time" content="2016-04-14T03:29:37.000Z">
+<meta property="og:updated_time" content="2016-04-14T08:54:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速创建自己的Blog（HEXO + GITHUB PAGE）">
 <meta name="twitter:description" content="&amp;#x81EA;&amp;#x5165;&amp;#x524D;&amp;#x7AEF;&amp;#x8FD9;&amp;#x884C;&amp;#x4EE5;&amp;#x6765;&amp;#xFF0C;&amp;#x5C31;&amp;#x60F3;&amp;#x7740;&amp;#x4EC0;&amp;#x4E48;&amp;#x65F6;&amp;#x5019;&amp;#x53EF;&amp;#x4EE5;&amp;#x50CF;&amp;#x5927;&amp;#x725B;&amp;#x4EEC;&amp;#x4E00;&amp;#x6837;&amp;#x6709;">
@@ -239,6 +239,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+        <!-- Table of Contents -->
+        
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建步骤"><span class="toc-number">1.</span> <span class="toc-text">创建步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-注册GitHub"><span class="toc-number">1.1.</span> <span class="toc-text">1. 注册GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置Github"><span class="toc-number">1.2.</span> <span class="toc-text">2. 配置Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-安装Hexo"><span class="toc-number">1.3.</span> <span class="toc-text">3. 安装Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-hexo操作"><span class="toc-number">1.4.</span> <span class="toc-text">4. hexo操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BLOG书写规则"><span class="toc-number">2.</span> <span class="toc-text">BLOG书写规则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-markdown语法"><span class="toc-number">2.1.</span> <span class="toc-text">1. markdown语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-如何插入图片"><span class="toc-number">2.2.</span> <span class="toc-text">2. 如何插入图片</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#综合参考"><span class="toc-number">3.</span> <span class="toc-text">综合参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEXO官网示例"><span class="toc-number">4.</span> <span class="toc-text">HEXO官网示例</span></a></li></ol>
+        </div>
+        
         <p>&#x81EA;&#x5165;&#x524D;&#x7AEF;&#x8FD9;&#x884C;&#x4EE5;&#x6765;&#xFF0C;&#x5C31;&#x60F3;&#x7740;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x50CF;&#x5927;&#x725B;&#x4EEC;&#x4E00;&#x6837;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x6280;&#x672F;Blog&#xFF0C;&#x628A;&#x81EA;&#x5DF1;&#x7684;&#x5FC3;&#x5F97;&#x4F53;&#x4F1A;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#xFF0C;&#x4E8E;&#x662F;&#xFF0C;&#x5728;&#x6252;&#x5404;&#x79CD;&#x7F51;&#x7AD9;&#x6559;&#x7A0B;&#x4E4B;&#x540E;&#xFF0C;&#x7EC8;&#x4E8E;&#x6709;&#x4E86;&#x8FD9;&#x4E2A;Blog&#x3002;&#x5F00;&#x95E8;&#x7B2C;&#x4E00;&#x7BC7;&#xFF0C;&#x5148;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x7528;hexo+gitHub&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;blog&#xFF08;&#x4EC5;&#x4F9B;&#x50CF;&#x6211;&#x8FD9;&#x6837;&#x7684;&#x5C0F;&#x767D;&#x767D;&#x4F7F;&#x7528;~&#x8BF7;&#x591A;&#x6307;&#x6559;&#xFF09;&#x3002;<br><a id="more"></a></p>
 <h2 id="&#x521B;&#x5EFA;&#x6B65;&#x9AA4;"><a href="#&#x521B;&#x5EFA;&#x6B65;&#x9AA4;" class="headerlink" title="&#x521B;&#x5EFA;&#x6B65;&#x9AA4;"></a>&#x521B;&#x5EFA;&#x6B65;&#x9AA4;</h2><h3 id="1-&#x6CE8;&#x518C;GitHub"><a href="#1-&#x6CE8;&#x518C;GitHub" class="headerlink" title="1. &#x6CE8;&#x518C;GitHub"></a>1. &#x6CE8;&#x518C;GitHub</h3><p>&#x8FDB;&#x5165;GitHub&#x5B98;&#x7F51;&#x8FDB;&#x884C;&#x6CE8;&#x518C; [<a href="https://github.com" target="_blank" rel="external">https://github.com</a>]<br><img src="/BuildBlog/register.png" alt="&#x6CE8;&#x518C;gitHub"></p>
 <h3 id="2-&#x914D;&#x7F6E;Github"><a href="#2-&#x914D;&#x7F6E;Github" class="headerlink" title="2. &#x914D;&#x7F6E;Github"></a>2. &#x914D;&#x7F6E;Github</h3><p>2.1 &#x5EFA;&#x7ACB;Repository<br>&#x5EFA;&#x7ACB;&#x4E0E;&#x4F60;&#x7528;&#x6237;&#x540D;&#x5BF9;&#x5E94;&#x7684;&#x4ED3;&#x5E93;&#xFF0C;&#x4ED3;&#x5E93;&#x540D;&#x5FC5;&#x987B;&#x4E3A;&#x3010;your_user_name.github.io&#x3011;</p>
@@ -275,6 +282,7 @@ helloWord.md
 <p>##tips<br>&#x5982;&#x679C;&#x4E2D;&#x95F4;&#x9047;&#x5230;&#x95EE;&#x9898;&#xFF0C;&#x6216;&#x8005;&#x5728;hexo deploy&#x4E4B;&#x540E;&#xFF0C;github&#x4E0A;&#x6CA1;&#x6709;&#x66F4;&#x65B0;&#xFF0C;&#x4E5F;&#x627E;&#x4E0D;&#x5230;&#x95EE;&#x9898;&#x6240;&#x5728;&#xFF0C;&#x5EFA;&#x8BAE;&#x91CD;&#x65B0;&#x6309;&#x7167;&#x7B2C;&#x56DB;&#x6B65;&#x6267;&#x884C;&#x4E00;&#x904D;&#xFF0C;&#x91CD;&#x65B0;&#x5B89;&#x88C5;hexo&#x3002;</p>
 <h2 id="&#x7EFC;&#x5408;&#x53C2;&#x8003;"><a href="#&#x7EFC;&#x5408;&#x53C2;&#x8003;" class="headerlink" title="&#x7EFC;&#x5408;&#x53C2;&#x8003;"></a>&#x7EFC;&#x5408;&#x53C2;&#x8003;</h2><p><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">http://www.cnblogs.com/zhcncn/p/4097881.html</a><br><a href="http://www.jianshu.com/p/1e402922ee32/" target="_blank" rel="external">Markdown&#x2014;&#x2014;&#x5165;&#x95E8;&#x6307;&#x5357;</a></p>
 <h2 id="HEXO&#x5B98;&#x7F51;&#x793A;&#x4F8B;"><a href="#HEXO&#x5B98;&#x7F51;&#x793A;&#x4F8B;" class="headerlink" title="HEXO&#x5B98;&#x7F51;&#x793A;&#x4F8B;"></a>HEXO&#x5B98;&#x7F51;&#x793A;&#x4F8B;</h2><p>See my <a href="/QuickStart/">&#x5B98;&#x7F51;&#x793A;&#x4F8B;</a> page for details.</p>
+<p><span id="busuanzi_container_page_pv"><br>  &#x672C;&#x6587;&#x603B;&#x9605;&#x8BFB;&#x91CF;<span id="busuanzi_value_page_pv"></span>&#x6B21;<br></span></p>
 
       
     </div>
@@ -340,6 +348,7 @@ helloWord.md
 
 
 <div class="duoshuo">
+       
 	<!-- 多说评论框 start -->
 	<div class="ds-thread" data-thread-key="BuildBlog" data-title="快速创建自己的Blog（HEXO + GITHUB PAGE）" data-url="http://yoursite.com/BuildBlog/"></div>
 	<!-- 多说评论框 end -->
@@ -367,6 +376,9 @@ helloWord.md
     <div id="footer-info">
     	<div class="footer-left">
     		&copy; 2016 Susan
+        <span id="busuanzi_container_site_uv">
+          总访问量<span id="busuanzi_value_site_uv"></span>次
+        </span>
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -421,6 +433,8 @@ MathJax.Hub.Queue(function() {
 </script>
 
 
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
   </div>
 </body>
 </html>
