@@ -122,7 +122,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/ES5/" style="font-size: 20px;">ES5</a> <a href="/tags/博客/" style="font-size: 20px;">博客</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
+						<a href="/tags/ES5/" style="font-size: 20px;">ES5</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/博客/" style="font-size: 20px;">博客</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
 					</div>
 				</section>
 				
@@ -199,6 +199,97 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-js-huiwen" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/js-huiwen/" class="article-date">
+  	<time datetime="2016-04-24T05:32:23.000Z" itemprop="datePublished">2016-04-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/js-huiwen/">javascript判断字符串是否是回文的算法实现</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>&#x5728;&#x6D4F;&#x89C8;&#x7F51;&#x9875;&#x65F6;&#xFF0C;&#x53D1;&#x73B0;&#x5982;&#x6807;&#x9898;&#x4E00;&#x6837;&#x7684;&#x7B97;&#x6CD5;&#x9898;&#xFF0C; &#x5927;&#x5BB6;&#x4E00;&#x8D77;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x5148;&#x6765;&#x89E3;&#x91CA;&#x4E00;&#x4E0B;&#x4EC0;&#x4E48;&#x662F;&#x56DE;&#x6587;&#xFF1A;&#x56DE;&#x6587;&#xFF08;&#x6307;&#x987A;&#x8BFB;&#x548C;&#x5012;&#x8BFB;&#x90FD;&#x4E00;&#x6837;&#x7684;&#x8BCD;&#x8BED;&#xFF09;&#x3002; &#x5C31;&#x50CF;&#x201C;&#x4E2D;&#x56FD;&#x4EBA;&#x4EBA;&#x56FD;&#x4E2D;&#x201D;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x56DE;&#x6587;&#x53E5;&#x3002;&#x8FD9;&#x9053;&#x9898;&#x7684;&#x8981;&#x6C42;&#x6709;&#x4EE5;&#x4E0B;&#x4E24;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x96F7;&#x58EB;reverse()&#x4E4B;&#x7C7B;&#x7684;&#x51FD;&#x6570;&#xFF1B;</li>
+<li>&#x5C01;&#x88C5;&#x3002;</li>
+</ol>
+<p>&#x521A;&#x4E00;&#x4E0A;&#x6765;&#xFF0C;&#x7B14;&#x8005;&#x6252;&#x4E86;&#x6252;&#x767E;&#x5EA6;&#xFF0C;&#x5F97;&#x5230;&#x5982;&#x4E0B;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>var len = str.length,
+    e=(!!(len%2)),
+    mid = e?Math.floor(len/2):(len/2),
+    prev = str.substring(0,mid),
+    next = e?str.substring(mid+1):str.substring(mid),
+    reg = new RegExp(&quot;[&quot;+prev+&quot;]&quot;,&quot;g&quot;);
+    alert(next.split(&quot;&quot;).reverse().join(&quot;&quot;)===prev);
+</code></pre><p>&#x77AC;&#x95F4;&#x89C9;&#x5F97;&#x5B8C;&#x7F8E;&#xFF0C;&#x7136;&#x800C;&#xFF0C;&#x770B;&#x6761;&#x4EF6;&#x6709;&#x8981;&#x6C42;&#x4E0D;&#x80FD;&#x6709;reverse(), &#x7B14;&#x8005;&#x53EA;&#x597D;&#x6539;&#x6210;:</p>
+<pre><code>var str = &quot;abcwwcba&quot;;
+//console.log( isPalindrome(str) )
+
+function isPalindrome(str){
+    var len = str.length,
+        e=(!!(len%2)),
+        mid = e?Math.floor(len/2):(len/2),
+        prev = str.substring(0,mid),
+        next = e?str.substring(mid+1):str.substring(mid),
+        reg = new RegExp(&quot;[&quot;+prev+&quot;]&quot;,&quot;g&quot;);
+    var nextArr = next.split(&quot;&quot;),
+        newNextArr = [];
+    for (var i=nextArr.length-1; i&gt;=0; i--){
+        newNextArr.push(nextArr[i])
+    }
+    return newNextArr.join(&quot;&quot;)===prev;
+}
+</code></pre><p>&#x5E0C;&#x671B;&#x5BF9;&#x5927;&#x5BB6;&#x6709;&#x5E2E;&#x52A9;&#xFF0C;&#x611F;&#x8C22;&#x3002;</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-ES5-JSON" class="article article-type-post" itemscope itemprop="blogPost">
   
