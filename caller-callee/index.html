@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技术,ES5,规范," />
+  <meta name="keywords" content="技术,JS," />
 
 
 
@@ -80,16 +80,18 @@
 
 
 
-<meta name="description" content="JavaScript&amp;#x8D77;&amp;#x521D;&amp;#x53D1;&amp;#x5C55;&amp;#x7F13;&amp;#x6162;&amp;#xFF0C;&amp;#x4F46;&amp;#x662F;&amp;#x6700;&amp;#x8FD1;&amp;#x6B63;&amp;#x5728;&amp;#x98DE;&amp;#x901F;&amp;#x8FDB;&amp;#x5316;&amp;#xFF0C;JavaScript&amp;#x662F;&amp;#x6301;&amp;#x4E45;&amp;#x7684;&amp;#x">
+<meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浅谈ECMAScript5">
-<meta property="og:url" content="http://yoursite.com/ecmascript5/index.html">
+<meta property="og:title" content="CALLER  &  CALLEE">
+<meta property="og:url" content="http://yoursite.com/caller-callee/index.html">
 <meta property="og:site_name" content="Susan的博客">
-<meta property="og:description" content="JavaScript&amp;#x8D77;&amp;#x521D;&amp;#x53D1;&amp;#x5C55;&amp;#x7F13;&amp;#x6162;&amp;#xFF0C;&amp;#x4F46;&amp;#x662F;&amp;#x6700;&amp;#x8FD1;&amp;#x6B63;&amp;#x5728;&amp;#x98DE;&amp;#x901F;&amp;#x8FDB;&amp;#x5316;&amp;#xFF0C;JavaScript&amp;#x662F;&amp;#x6301;&amp;#x4E45;&amp;#x7684;&amp;#x">
-<meta property="og:updated_time" content="2016-04-25T02:20:59.000Z">
+<meta property="og:description">
+<meta property="og:image" content="http://yoursite.com/caller-callee/caller.jpg">
+<meta property="og:updated_time" content="2016-12-21T08:43:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浅谈ECMAScript5">
-<meta name="twitter:description" content="JavaScript&amp;#x8D77;&amp;#x521D;&amp;#x53D1;&amp;#x5C55;&amp;#x7F13;&amp;#x6162;&amp;#xFF0C;&amp;#x4F46;&amp;#x662F;&amp;#x6700;&amp;#x8FD1;&amp;#x6B63;&amp;#x5728;&amp;#x98DE;&amp;#x901F;&amp;#x8FDB;&amp;#x5316;&amp;#xFF0C;JavaScript&amp;#x662F;&amp;#x6301;&amp;#x4E45;&amp;#x7684;&amp;#x">
+<meta name="twitter:title" content="CALLER  &  CALLEE">
+<meta name="twitter:description">
+<meta name="twitter:image" content="http://yoursite.com/caller-callee/caller.jpg">
 
 
 
@@ -107,7 +109,7 @@
   };
 </script>
 
-  <title> 浅谈ECMAScript5 | Susan的博客 </title>
+  <title> CALLER  &  CALLEE | Susan的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -277,7 +279,7 @@
             
             
               
-                浅谈ECMAScript5
+                CALLER  &  CALLEE
               
             
           </h1>
@@ -289,8 +291,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-14T10:28:56+08:00" content="2016-04-14">
-              2016-04-14
+            <time itemprop="dateCreated" datetime="2016-12-21T15:11:50+08:00" content="2016-12-21">
+              2016-12-21
             </time>
           </span>
 
@@ -315,8 +317,8 @@
 
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/技术/ES5/" itemprop="url" rel="index">
-                    <span itemprop="name">ES5</span>
+                  <a href="/categories/技术/JS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS</span>
                   </a>
                 </span>
 
@@ -331,8 +333,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/ecmascript5/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="/ecmascript5/" itemprop="commentsCount"></span>
+                <a href="/caller-callee/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="/caller-callee/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -360,20 +362,65 @@
       
 
       
-        <blockquote>
-<p>JavaScript&#x8D77;&#x521D;&#x53D1;&#x5C55;&#x7F13;&#x6162;&#xFF0C;&#x4F46;&#x662F;&#x6700;&#x8FD1;&#x6B63;&#x5728;&#x98DE;&#x901F;&#x8FDB;&#x5316;&#xFF0C;JavaScript&#x662F;&#x6301;&#x4E45;&#x7684;&#xFF0C;&#x672A;&#x6765;&#x6709;&#x66F4;&#x5927;&#x7684;&#x53D1;&#x5C55;&#x7A7A;&#x95F4;&#x3002;&#x76EE;&#x524D;&#xFF0C;ES5&#x662F;&#x5E94;&#x7528;&#x6700;&#x5E7F;&#x6CDB;&#x7684;&#xFF0C;&#x638C;&#x63E1;&#x597D;&#x57FA;&#x7840;&#xFF0C;&#x628A;&#x63E1;&#x597D;&#x8D8B;&#x52BF;&#x624D;&#x662F;&#x6700;&#x5173;&#x952E;&#x7684;&#x3002;</p>
-</blockquote>
+        <p><img src="/caller-callee/caller.jpg" alt="caller or callee?"></p>
 <a id="more"></a>
-<p>Ecma&#x6807;&#x51C6;&#x5EFA;&#x7ACB;&#x5728;&#x4E00;&#x4E9B;&#x539F;&#x672C;&#x7684;&#x6280;&#x672F;&#x4E0A;&#xFF0C;&#x6700;&#x4E3A;&#x8457;&#x540D;&#x7684;&#x662F;JavaScript(&#x7F51;&#x666F;)&#x548C;JScript (&#x5FAE;&#x8F6F;)&#x3002;&#x8BED;&#x8A00;&#x7531;&#x7F51;&#x666F;&#x7684;Brendan Eich&#x53D1;&#x660E;&#x800C;&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x5728;&#x8FD9;&#x4E2A;&#x516C;&#x53F8;&#x7684;Navigator 2.0&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x3002;&#x5B83;&#x51FA;&#x73B0;&#x5728;&#x6240;&#x6709;Netscape&#x540E;&#x6765;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x4EE5;&#x53CA;&#x5FAE;&#x8F6F;&#x4ECE;Internet Explorer 3.0&#x4E4B;&#x540E;&#x7684;&#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x3002;</p>
-<p>&#x8FD9;&#x4E00;&#x6807;&#x51C6;&#x7684;&#x7F16;&#x5236;&#x81EA;1996&#x5E74;&#x5341;&#x4E00;&#x6708;&#x5F00;&#x59CB;&#x3002;&#x8FD9;&#x4E00;Ecma&#x6807;&#x51C6;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x88AB;1997&#x5E74;&#x516D;&#x6708;&#x7684;Ecma General Assembly&#x91C7;&#x7EB3;&#x3002;</p>
-<p>&#x4E0A;&#x8FF0;Ecma&#x6807;&#x51C6;&#x88AB;&#x4EE5;&#x5FEB;&#x901F;&#x8DDF;&#x8FDB;&#x6D41;&#x7A0B;&#x63D0;&#x4EA4;&#x81F3;ISO/IEC JTC 1&#xFF0C;&#x5E76;&#x4F5C;&#x4E3A;&#x4E8E;1998&#x5E74;&#x56DB;&#x6708;&#x4F5C;&#x4E3A;ISO/IEC 16262&#x901A;&#x8FC7;&#x3002;1998&#x5E74;&#x516D;&#x6708;Ecma General Assembly&#x901A;&#x8FC7;&#x4E86;ECMA-262&#x7B2C;&#x4E8C;&#x7248;&#x4EE5;&#x4FDD;&#x6301;&#x5B83;&#x4E0E;ISO/IEC 16262&#x7684;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x6027;&#x3002;&#x7B2C;&#x4E00;&#x7248;&#x5230;&#x7B2C;&#x4E8C;&#x7248;&#x7684;&#x53D8;&#x66F4;&#x4EC5;&#x4EC5;&#x662F;&#x7F16;&#x8F91;&#x6027;&#x8D28;&#x7684;&#x3002;</p>
-<p>&#x7B2C;&#x4E09;&#x7248;&#x6807;&#x51C6;&#x5F15;&#x5165;&#x4E86;&#x5F3A;&#x5927;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x66F4;&#x4F73;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5904;&#x7406;&#xFF0C;&#x65B0;&#x7684;&#x63A7;&#x5236;&#x8BED;&#x53E5;&#xFF0C;try/catch&#x5F02;&#x5E38;&#x5904;&#x7406;&#xFF0C;&#x66F4;&#x4E25;&#x5BC6;&#x5730;&#x9519;&#x8BEF;&#x5B9A;&#x4E49;&#xFF0C;&#x683C;&#x5F0F;&#x5316;&#x7684;&#x6570;&#x5B57;&#x8F93;&#x51FA;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x4E3A;&#x56FD;&#x9645;&#x5316;&#x548C;&#x672A;&#x6765;&#x8BED;&#x8A00;&#x6210;&#x957F;&#x9884;&#x7559;&#x7684;&#x5C0F;&#x53D8;&#x66F4;&#x3002;ECMAScript&#x6807;&#x51C6;&#x7684;&#x7B2C;&#x4E09;&#x7248;1999&#x5E74;&#x5341;&#x4E8C;&#x6708;&#x7684;Ecma General Assembly&#x91C7;&#x7EB3;&#x5E76;&#x4E8E;2002&#x5E74;&#x516D;&#x6708;&#x4F5C;&#x4E3A;ISO/IEC 16262:2002&#x53D1;&#x5E03;&#x3002;</p>
-<p>&#x81EA;&#x7B2C;&#x4E09;&#x7248;&#x53D1;&#x5E03;&#x4EE5;&#x6765;&#xFF0C;ECMAScript&#x56E0;&#x5176;&#x4E0E;&#x4E07;&#x7EF4;&#x7F51;&#x7684;&#x5173;&#x8054;&#x800C;&#x83B7;&#x5F97;&#x4E86;&#x5E7F;&#x6CDB;&#x91C7;&#x7528;&#xFF0C;&#x5B83;&#x5DF2;&#x7ECF;&#x6210;&#x4E3A;&#x6240;&#x6709;web&#x6D4F;&#x89C8;&#x5668;&#x5B9E;&#x8D28;&#x4E0A;&#x90FD;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x79CD;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x3002;&#x4E3A;&#x4E86;&#x7F16;&#x5236;&#x7B2C;&#x56DB;&#x7248;ECMAScript&#xFF0C;&#x6709;&#x5F88;&#x591A;&#x6709;&#x610F;&#x4E49;&#x7684;&#x5DE5;&#x4F5C;&#x3002;&#x5C3D;&#x7BA1;&#x8FD9;&#x5DE5;&#x4F5C;&#x6CA1;&#x80FD;&#x5B8C;&#x6210;&#x800C;&#x4E14;&#x4E5F;&#x6CA1;&#x6709;&#x4F5C;&#x4E3A;ECMAScript&#x7684;&#x7B2C;&#x56DB;&#x7248;&#x53D1;&#x5E03;&#xFF0C;&#x5B83;&#x4FC3;&#x8FDB;&#x4E86;&#x8BED;&#x8A00;&#x7684;&#x8FDB;&#x5316;&#x3002;ECMAScript&#x7B2C;&#x4E94;&#x7248;&#xFF08;&#x53D1;&#x5E03;&#x4E3A;ECMA-262 5th edition&#xFF09;&#x7EB8;&#x9762;&#x5316;&#x4E86;&#x5F88;&#x591A;&#x4E8B;&#x5B9E;&#x4E0A;&#x5DF2;&#x7ECF;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x5F62;&#x6210;&#x5171;&#x8BC6;&#x7684;&#x8BED;&#x8A00;&#x89C4;&#x8303;&#x89E3;&#x6790;&#x5E76;&#x4E14;&#x589E;&#x52A0;&#x4E86;&#x5BF9;&#x81EA;&#x7B2C;&#x4E09;&#x7248;&#x53D1;&#x5E03;&#x4EE5;&#x6765;&#x7684;&#x65B0;&#x529F;&#x80FD;&#x7684;&#x652F;&#x6301;&#x3002;&#x8FD9;&#x4E9B;&#x529F;&#x80FD;&#x5305;&#x62EC;&#x8BBF;&#x95EE;&#x5668;&#x5C5E;&#x6027;&#xFF0C;&#x53CD;&#x5C04;&#x521B;&#x5EFA;&#x4EE5;&#x53CA;&#x5BF9;&#x8C61;&#x68C0;&#x6D4B;&#xFF0C;&#x5C5E;&#x6027;&#x7279;&#x6027;&#x7684;&#x7A0B;&#x5E8F;&#x63A7;&#x5236;&#xFF0C;&#x65B0;&#x589E;&#x7684;&#x6570;&#x7EC4;&#x64CD;&#x4F5C;&#x51FD;&#x6570;&#xFF0C;JSON&#x5BF9;&#x8C61;&#x7F16;&#x7801;&#x683C;&#x5F0F;&#xFF0C;&#x4EE5;&#x53CA;&#x63D0;&#x4F9B;&#x4E86;&#x6539;&#x8FDB;&#x7684;&#x9519;&#x8BEF;&#x68C0;&#x67E5;&#x4EE5;&#x53CA;&#x7A0B;&#x5E8F;&#x5B89;&#x5168;&#x6027;&#x7684;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x3002;</p>
-<p>&#x8FD9;&#x4E00;ECMAScript 5.1&#x7248;&#x672C;&#x6807;&#x51C6;&#x5B8C;&#x5168;&#x4E0E;&#x56FD;&#x9645;&#x6807;&#x51C6;ISO/IEC 16262:2011&#x7684;&#x7B2C;&#x4E09;&#x7248;&#x672C;&#x4E00;&#x81F4;&#x3002;&#x8FD9;&#x4E00;Ecma&#x89C4;&#x8303;&#x7531;2011&#x5E74;&#x516D;&#x6708;Ecma General Assembly&#x91C7;&#x7EB3;&#x3002;&#x76EE;&#x524D;&#xFF0C;ECMAScript6&#x5DF2;&#x7ECF;&#x51FA;&#x6765;&#x3002;2015&#x5E74;6&#x6708;17&#x65E5;&#xFF0C;Ecma&#x56FD;&#x9645;&#x5927;&#x4F1A;&#x5BA3;&#x5E03;&#x6B63;&#x5F0F;&#x6279;&#x51C6;ECMA-262&#x7B2C;6&#x7248;&#xFF0C;&#x4EA6;&#x5373;ECMAScript 2015&#xFF08;&#x66FE;&#x7528;&#x540D;&#xFF1A;ECMAScript 6&#x3001;ES6&#xFF09;&#x7684;&#x8BED;&#x8A00;&#x89C4;&#x8303;&#x3002;&#x622A;&#x6B62;&#x53D1;&#x5E03;&#x65E5;&#x671F;&#xFF0C;JavaScript&#x7684;&#x5B98;&#x65B9;&#x540D;&#x79F0;&#x662F;ECMAScript 2015&#xFF0C;Ecma&#x56FD;&#x9645;&#x610F;&#x5728;&#x66F4;&#x9891;&#x7E41;&#x5730;&#x53D1;&#x5E03;&#x5305;&#x542B;&#x5C0F;&#x89C4;&#x6A21;&#x589E;&#x91CF;&#x66F4;&#x65B0;&#x7684;&#x65B0;&#x7248;&#x672C;&#xFF0C;&#x4E0B;&#x4E00;&#x7248;&#x672C;&#x5C06;&#x4E8E;2016&#x5E74;&#x53D1;&#x5E03;&#xFF0C;&#x547D;&#x540D;&#x4E3A;ECMAScript 2016&#x3002;&#x4ECE;&#x73B0;&#x5728;&#x5F00;&#x59CB;&#xFF0C;&#x65B0;&#x7248;&#x672C;&#x5C06;&#x6309;&#x7167;ECMAScript+&#x5E74;&#x4EFD;&#x7684;&#x5F62;&#x5F0F;&#x53D1;&#x5E03;&#x3002;</p>
-<p>ECMAScript 2016&#x7684;&#x5236;&#x5B9A;&#x5DE5;&#x4F5C;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#xFF0C;&#x8BB8;&#x591A; &#x8349;&#x6848; &#x5DF2;&#x88AB;&#x63D0;&#x4EA4;&#x5230;&#x59D4;&#x5458;&#x4F1A;&#xFF0C;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x8FD9;&#x4E9B;&#xFF1A;&#x5F02;&#x6B65;&#x65B9;&#x6CD5;&#x3001;&#x5B9A;&#x578B;&#x5BF9;&#x8C61;&#x3001;&#x5E76;&#x884C;JavaScript&#x3001;&#x7C7B;&#x4FEE;&#x9970;&#x7B26;&#x4EE5;&#x53CA;observables&#x3002;&#x867D;&#x7136;&#x59D4;&#x5458;&#x4F1A;&#x6B63;&#x5728;&#x79EF;&#x6781;&#x8BC4;&#x4F30;&#x8FD9;&#x4E9B;&#x7279;&#x6027;&#xFF0C;&#x4F46;&#x6211;&#x4EEC;&#x65E0;&#x6CD5;&#x9884;&#x77E5;&#x5B83;&#x4EEC;&#x7684;&#x672A;&#x6765;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x4F1A;&#x52A0;&#x5165;&#x5230;&#x4E0B;&#x4E00;&#x7248;&#x89C4;&#x8303;&#xFF0C;&#x53E6;&#x4E00;&#x4E9B;&#x4F1A;&#x52A0;&#x5165;&#x672A;&#x6765;&#x7684;&#x5176;&#x5B83;&#x89C4;&#x8303;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x5C06;&#x6700;&#x7EC8;&#x88AB;&#x9057;&#x5F03;&#x3002;</p>
-<p>&#x7531;&#x6B64;&#x53EF;&#x89C1;&#xFF0C;ES&#x53D1;&#x5C55;&#x975E;&#x5E38;&#x8FC5;&#x901F;&#xFF0C;&#x800C;&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x5E94;&#x7528;&#x6700;&#x5E7F;&#x6CDB;&#x7684;&#x8FD8;&#x662F;ES5&#xFF0C;&#x5176;&#x4ED6;&#x7248;&#x672C;&#x4E5F;&#x662F;&#x57FA;&#x4E8E;&#x6B64;&#x7248;&#x672C;&#x800C;&#x8FDB;&#x884C;&#x7684;&#x4FEE;&#x6B63;&#x548C;&#x6539;&#x8FDB;&#xFF0C;&#x4ECD;&#x6709;&#x517C;&#x5BB9;&#x7B49;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x4E86;&#x89E3;ES5&#x5C24;&#x4E3A;&#x5173;&#x952E;&#x3002;&#x4ECA;&#x540E;&#x6211;&#x4F1A;&#x6162;&#x6162;&#x68B3;&#x7406;ES5&#x4E2D;&#x7684;&#x89C4;&#x8303;&#xFF0C;&#x592F;&#x5B9E;&#x57FA;&#x7840;&#x3002;</p>
-<h2 id="&#x63A8;&#x8350;&#x9605;&#x8BFB;"><a href="#&#x63A8;&#x8350;&#x9605;&#x8BFB;" class="headerlink" title="&#x63A8;&#x8350;&#x9605;&#x8BFB;"></a>&#x63A8;&#x8350;&#x9605;&#x8BFB;</h2><p><a href="http://yanhaijing.com/es5/#about" target="_blank" rel="external">ECMAScript5.1&#x4E2D;&#x6587;&#x7248;</a><br><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6 &#x5165;&#x95E8;(&#x962E;&#x4E00;&#x5CF0;)</a><br><a href="http://www.tuicool.com/articles/vMv6b2z" target="_blank" rel="external">ECMAScript5.1&#x53CA;&#x5176;&#x65B0;&#x589E;API&#x7B80;&#x4ECB;</a><br><a href="https://www.w3.org/html/ig/zh/wiki/ES5" target="_blank" rel="external">W3C ES5</a></p>
-<p><span id="busuanzi_container_page_pv"><br>  &#x672C;&#x6587;&#x603B;&#x9605;&#x8BFB;&#x91CF;<span id="busuanzi_value_page_pv"></span>&#x6B21;<br></span></p>
+<p><br></p>
+<h2 id="CALLER"><a href="#CALLER" class="headerlink" title="CALLER"></a>CALLER</h2><p>CALLER&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x51FD;&#x6570;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x4E86;&#x5F53;&#x524D;&#x51FD;&#x6570;&#x3002;functionName.caller<br>functionName &#x5BF9;&#x8C61;&#x662F;&#x6240;&#x6267;&#x884C;&#x51FD;&#x6570;&#x7684;&#x540D;&#x79F0;&#x3002;<br>&#x8BF4;&#x660E;&#xFF1A;<br>caller &#x5C5E;&#x6027;&#x53EA;&#x6709;&#x5728;&#x51FD;&#x6570;&#x6267;&#x884C;&#x65F6;&#x624D;&#x6709;&#x5B9A;&#x4E49;&#x3002;&#x5982;&#x679C;&#x51FD;&#x6570;&#x662F;&#x7531;&#x9876;&#x5C42;&#x8C03;&#x7528;&#x7684;&#xFF0C;&#x90A3;&#x4E48; caller &#x5305;&#x542B;&#x7684;&#x5C31;&#x662F; null &#x3002;&#x5982;&#x679C;&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x4F7F;&#x7528; caller &#x5C5E;&#x6027;&#xFF0C;&#x90A3;&#x4E48;&#x7ED3;&#x679C;&#x548C; functionName.toString &#x4E00;&#x6837;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x663E;&#x793A;&#x7684;&#x662F;&#x51FD;&#x6570;&#x7684;&#x53CD;&#x7F16;&#x8BD1;&#x6587;&#x672C;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>// caller demo 
+function callerDemo() {
+    if (callerDemo.caller) {
+        var a= callerDemo.caller.toString();
+        alert(a);
+    } else {
+        alert(&quot;this is a top function&quot;);
+    }
+}
+function handleCaller() {
+    callerDemo();
+}
+
+//&#x8C03;&#x7528;
+handleCaller();
+&gt;&gt;&gt; function handleCaller() {
+        callerDemo();
+    }
+</code></pre><p>&#x56E0;&#x4E3A;callerDemo&#x51FD;&#x6570;&#x5916; &#x5957;&#x7740;handleCaller&#x51FD;&#x6570;&#xFF0C; &#x90A3;&#x4E48;&#x5728;callerDemo&#x51FD;&#x6570;&#x4E2D;caller&#x6307;&#x5411;&#x7684;&#x662F;&#x5957;&#x7740;callerDemo&#x7684;&#x90A3;&#x4E2A;&#x51FD;&#x6570;&#x3002;</p>
+<p><br></p>
+<h2 id="CALLEE"><a href="#CALLEE" class="headerlink" title="CALLEE"></a>CALLEE</h2><p>callee &#x662F; arguments &#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x5728;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x51FD;&#x6570;&#x4F53;&#x5185;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x6307;&#x5411;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;&#x3002;&#x5F53;&#x51FD;&#x6570;&#x662F;&#x533F;&#x540D;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x8FD9;&#x662F;&#x5F88;&#x6709;&#x7528;&#x7684;&#xFF0C; &#x6BD4;&#x5982;&#x6CA1;&#x6709;&#x540D;&#x5B57;&#x7684;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F; (&#x4E5F;&#x53EB;&#x505A;&#x201D;&#x533F;&#x540D;&#x51FD;&#x6570;&#x201D;)&#xFF0C;&#x5373;&#x8FD4;&#x56DE;&#x6B63;&#x88AB;&#x6267;&#x884C;&#x7684; Function &#x5BF9;&#x8C61;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6240;&#x6307;&#x5B9A;&#x7684; Function &#x5BF9;&#x8C61;&#x7684;&#x6B63;&#x6587;&#x3002;</p>
+<pre><code>[function.]arguments.callee
+</code></pre><p>&#x53EF;&#x9009;&#x9879; function &#x53C2;&#x6570;&#x662F;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684; Function &#x5BF9;&#x8C61;&#x7684;&#x540D;&#x79F0;&#x3002;&#x8BF4;&#x660E;&#xFF1A;<br>callee &#x5C5E;&#x6027;&#x7684;&#x521D;&#x59CB;&#x503C;&#x5C31;&#x662F;&#x6B63;&#x88AB;&#x6267;&#x884C;&#x7684; Function &#x5BF9;&#x8C61;&#x3002;<br>callee &#x5C5E;&#x6027;&#x662F; arguments &#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x4E2A;&#x6210;&#x5458;&#xFF0C;&#x5B83;&#x8868;&#x793A;&#x5BF9;&#x51FD;&#x6570;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x8FD9;&#x6709;&#x5229;&#x4E8E;&#x533F;&#x540D;&#x51FD;&#x6570;&#x7684;&#x9012;&#x5F52;&#x6216;&#x8005;&#x4FDD;&#x8BC1;&#x51FD;&#x6570;&#x7684;&#x5C01;&#x88C5;&#x6027;&#xFF0C;&#x4F8B;&#x5982;&#x4E0B;&#x8FB9;&#x793A;&#x4F8B;&#x7684;&#x9012;&#x5F52;&#x8BA1;&#x7B97;1&#x5230;n&#x7684;&#x81EA;&#x7136;&#x6570;&#x4E4B;&#x548C;&#x3002;&#x800C;&#x8BE5;&#x5C5E;&#x6027;&#x4EC5;&#x5F53;&#x76F8;&#x5173;&#x51FD;&#x6570;&#x6B63;&#x5728;&#x6267;&#x884C;&#x65F6;&#x624D;&#x53EF;&#x7528;&#x3002;&#x8FD8;&#x6709;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;callee&#x62E5;&#x6709;length&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x6709;&#x65F6;&#x5019;&#x7528;&#x4E8E;&#x9A8C;&#x8BC1;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x3002;arguments.length&#x662F;&#x5B9E;&#x53C2;&#x957F;&#x5EA6;&#xFF0C;arguments.callee.length&#x662F;<br>&#x5F62;&#x53C2;&#x957F;&#x5EA6;&#xFF0C;&#x7531;&#x6B64;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x8C03;&#x7528;&#x65F6;&#x5F62;&#x53C2;&#x957F;&#x5EA6;&#x662F;&#x5426;&#x548C;&#x5B9E;&#x53C2;&#x957F;&#x5EA6;&#x4E00;&#x81F4;&#x3002;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>function calleeDemo() {
+    alert(arguments.callee);
+}
+//&#x7528;&#x4E8E;&#x9A8C;&#x8BC1;&#x53C2;&#x6570;
+function calleeLengthDemo(arg1, arg2) {
+    if (arguments.length==arguments.callee.length) {
+        window.alert(&quot;&#x9A8C;&#x8BC1;&#x5F62;&#x53C2;&#x548C;&#x5B9E;&#x53C2;&#x957F;&#x5EA6;&#x6B63;&#x786E;&#xFF01;&quot;);
+        return;
+    } else {
+        alert(&quot;&#x5B9E;&#x53C2;&#x957F;&#x5EA6;&#xFF1A;&quot; +arguments.length);
+        alert(&quot;&#x5F62;&#x53C2;&#x957F;&#x5EA6;&#xFF1A; &quot; +arguments.callee.length);
+    }
+}
+
+//&#x9012;&#x5F52;&#x8BA1;&#x7B97;
+var sum = function(n){
+  if (n &lt;= 0){                        
+       return 1;
+  }else{
+    return n+arguments.callee(n - 1)
+  }
+}
+//&#x6BD4;&#x8F83;&#x4E00;&#x822C;&#x7684;&#x9012;&#x5F52;&#x51FD;&#x6570;&#xFF1A;
+var sum = function(n){
+    if (1==n) {
+        return 1;
+    }else{
+        return n + sum (n-1);
+    }
+}
+&#x8C03;&#x7528;&#x65F6;&#xFF1A;alert(sum(100));
+</code></pre><p>&#x5176;&#x4E2D;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x5305;&#x542B;&#x4E86;&#x5BF9;sum&#x81EA;&#x8EAB;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x51FD;&#x6570;&#x540D;&#x4EC5;&#x4EC5;&#x662F;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x540D;&#xFF0C;&#x5728;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x8C03;&#x7528;sum&#x5373;&#x76F8;&#x5F53;&#x4E8E;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x4F53;&#x73B0;&#x51FA;&#x662F;&#x8C03;&#x7528;&#x81EA;&#x8EAB;&#xFF0C;&#x8FD9;&#x65F6;&#x4F7F;&#x7528;callee&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
 
       
     </div>
@@ -396,9 +443,7 @@
           
             <a href="/tags/技术/" rel="tag">#技术</a>
           
-            <a href="/tags/ES5/" rel="tag">#ES5</a>
-          
-            <a href="/tags/规范/" rel="tag">#规范</a>
+            <a href="/tags/JS/" rel="tag">#JS</a>
           
         </div>
       
@@ -407,17 +452,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/canyou/" rel="next" title="适不适合做前端？">
-                <i class="fa fa-chevron-left"></i> 适不适合做前端？
+              <a href="/front-cache/" rel="next" title="前端清除浏览器缓存的几种办法">
+                <i class="fa fa-chevron-left"></i> 前端清除浏览器缓存的几种办法
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ES5-JSON/" rel="prev" title="ES5—JSON对象">
-                ES5—JSON对象 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -466,8 +507,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="/ecmascript5/"
-           data-title="浅谈ECMAScript5" data-url="http://yoursite.com/ecmascript5/">
+      <div class="ds-thread" data-thread-key="/caller-callee/"
+           data-title="CALLER  &  CALLEE" data-url="http://yoursite.com/caller-callee/">
       </div>
     
   </div>
@@ -578,7 +619,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐阅读"><span class="nav-number">1.</span> <span class="nav-text">推荐阅读</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CALLER"><span class="nav-number">1.</span> <span class="nav-text">CALLER</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CALLEE"><span class="nav-number">2.</span> <span class="nav-text">CALLEE</span></a></li></ol></div>
             
           </div>
         </section>
