@@ -279,6 +279,170 @@
             
               
                 
+                <a class="post-title-link" href="/js-huiwen/" itemprop="url">
+                  javascript判断字符串是否是回文的算法实现
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-24T13:32:23+08:00" content="2016-04-24">
+              2016-04-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术/JS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/js-huiwen/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="/js-huiwen/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>&#x5728;&#x6D4F;&#x89C8;&#x7F51;&#x9875;&#x65F6;&#xFF0C;&#x53D1;&#x73B0;&#x5982;&#x6807;&#x9898;&#x4E00;&#x6837;&#x7684;&#x7B97;&#x6CD5;&#x9898;&#xFF0C; &#x5927;&#x5BB6;&#x4E00;&#x8D77;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x5148;&#x6765;&#x89E3;&#x91CA;&#x4E00;&#x4E0B;&#x4EC0;&#x4E48;&#x662F;&#x56DE;&#x6587;&#xFF1A;&#x56DE;&#x6587;&#xFF08;&#x6307;&#x987A;&#x8BFB;&#x548C;&#x5012;&#x8BFB;&#x90FD;&#x4E00;&#x6837;&#x7684;&#x8BCD;&#x8BED;&#xFF09;&#x3002; &#x5C31;&#x50CF;&#x201C;&#x4E2D;&#x56FD;&#x4EBA;&#x4EBA;&#x56FD;&#x4E2D;&#x201D;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x56DE;&#x6587;&#x53E5;&#x3002;&#x8FD9;&#x9053;&#x9898;&#x7684;&#x8981;&#x6C42;&#x6709;&#x4EE5;&#x4E0B;&#x4E24;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x7C7B;&#x4F3C;reverse()&#x4E4B;&#x7C7B;&#x7684;&#x51FD;&#x6570;&#xFF1B;</li>
+<li>&#x5C01;&#x88C5;&#x3002;</li>
+</ol>
+<p>&#x521A;&#x4E00;&#x4E0A;&#x6765;&#xFF0C;&#x7B14;&#x8005;&#x6252;&#x4E86;&#x6252;&#x767E;&#x5EA6;&#xFF0C;&#x5F97;&#x5230;&#x5982;&#x4E0B;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>var len = str.length,
+    e=(!!(len%2)),
+    mid = e?Math.floor(len/2):(len/2),
+    prev = str.substring(0,mid),
+    next = e?str.substring(mid+1):str.substring(mid),
+    reg = new RegExp(&quot;[&quot;+prev+&quot;]&quot;,&quot;g&quot;);
+    alert(next.split(&quot;&quot;).reverse().join(&quot;&quot;)===prev);
+</code></pre><p>&#x77AC;&#x95F4;&#x89C9;&#x5F97;&#x5B8C;&#x7F8E;&#xFF0C;&#x7136;&#x800C;&#xFF0C;&#x770B;&#x6761;&#x4EF6;&#x6709;&#x8981;&#x6C42;&#x4E0D;&#x80FD;&#x6709;reverse(), &#x7B14;&#x8005;&#x53EA;&#x597D;&#x6539;&#x6210;:</p>
+<pre><code>var str = &quot;abcwwcba&quot;;
+//console.log( isPalindrome(str) )
+
+function isPalindrome(str){
+    var len = str.length,
+        e=(!!(len%2)),
+        mid = e?Math.floor(len/2):(len/2),
+        prev = str.substring(0,mid),
+        next = e?str.substring(mid+1):str.substring(mid),
+        reg = new RegExp(&quot;[&quot;+prev+&quot;]&quot;,&quot;g&quot;);
+    var nextArr = next.split(&quot;&quot;),
+        newNextArr = [];
+    for (var i=nextArr.length-1; i&gt;=0; i--){
+        newNextArr.push(nextArr[i])
+    }
+    return newNextArr.join(&quot;&quot;)===prev;
+}
+</code></pre><p>&#x5E0C;&#x671B;&#x5BF9;&#x5927;&#x5BB6;&#x6709;&#x5E2E;&#x52A9;&#xFF0C;&#x611F;&#x8C22;&#x3002;</p>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/ES5-JSON/" itemprop="url">
                   ES5—JSON对象
                 </a>
@@ -1063,7 +1227,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1071,7 +1235,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1080,7 +1244,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
